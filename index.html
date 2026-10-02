@@ -5,7 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>baseballapp</title>
 
-    <base href="/baseball/" />
+    <base id="dynamic-base" href="./" />
+    <script>
+            // 현재 접속한 주소가 내 컴퓨터(localhost)가 아니라면 (즉, 깃허브 페이지라면) 자동으로 /baseball/ 적용!
+            if (!window.location.hostname.includes('localhost') && !window.location.hostname.includes('127.0.0.1')) {
+                document.getElementById('dynamic-base').href = '/baseball/';
+            } else {
+                document.getElementById('dynamic-base').href = './';
+            }
+    </script>
 
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/app.css" />
