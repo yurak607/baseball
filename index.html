@@ -51,13 +51,6 @@
     <!-- 이렇게 아주 심플하게 한 줄만 남겨주세요 -->
     <script src="_framework/blazor.webassembly.js"></script>
 
-    <!-- 2. 무결성(암호) 검사를 무시하고 파일을 강제로 불러오는 코드를 추가합니다. -->
-    <script>
-                        Blazor.start({
-                            loadBootResource: function (type, name, defaultUri, integrity) {
-                                return defaultUri;
-                            }
-                        });
-    </script>
+    
 </body>
 </html>
